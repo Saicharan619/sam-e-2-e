@@ -1,17 +1,17 @@
 pipeline {
     agent any
-    environment {
-        SONAR_URL = 'http://192.168.2.174:9000'  // SonarQube server URL
-        SONAR_TOKEN = credentials('sonar-token')  // Jenkins credentials for SonarQube token
-        IMAGE_TAG = "java_calculator"  // Image tag for Docker
-        DOCKER_HUB_USER = credentials('dockerhub')  // Docker Hub credentials
-        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-key')  // Google Cloud credentials for GCP
-        DEPLOY_YAML = 'kubernetes/deployment.yaml'  // Path to Kubernetes deployment YAML
-        CLUSTER_NAME = 'cluster-1'  // GKE Cluster name
-        ZONE = 'us-central1-c'  // GKE Cluster zone
-        IMAGE_NAME = "java_calculator"  // Docker image name
-        DOCKER_REPO = "saicharan12121/java_calculator"  // Docker repository
-    }
+    // environment {
+    //     SONAR_URL = 'http://192.168.2.174:9000'  // SonarQube server URL
+    //     SONAR_TOKEN = credentials('sonar-token')  // Jenkins credentials for SonarQube token
+    //     IMAGE_TAG = "java_calculator"  // Image tag for Docker
+    //     DOCKER_HUB_USER = credentials('dockerhub')  // Docker Hub credentials
+    //     GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-key')  // Google Cloud credentials for GCP
+    //     DEPLOY_YAML = 'kubernetes/deployment.yaml'  // Path to Kubernetes deployment YAML
+    //     CLUSTER_NAME = 'cluster-1'  // GKE Cluster name
+    //     ZONE = 'us-central1-c'  // GKE Cluster zone
+    //     IMAGE_NAME = "java_calculator"  // Docker image name
+    //     DOCKER_REPO = "saicharan12121/java_calculator"  // Docker repository
+    // }
 
     stages {
 
