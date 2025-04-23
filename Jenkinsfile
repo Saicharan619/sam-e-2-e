@@ -25,6 +25,8 @@ pipeline {
             sh """
             pwd
             ls
+            java --version
+            whoami
             mvn clean package
             
             """
