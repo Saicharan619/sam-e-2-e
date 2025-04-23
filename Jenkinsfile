@@ -15,11 +15,7 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Saicharan619/devops-end-to-end-java1.git'
-            }
-        }
+    
     stage( "maven" ){
         steps{
             sh """
